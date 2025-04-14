@@ -10,7 +10,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import java.lang.*;
 
-public class TestClass01 {
+public class logintoWebpage {
     WebDriver driver;
 
     @BeforeClass
@@ -22,7 +22,7 @@ public class TestClass01 {
 
     @AfterClass
     public void tearDown(){
-//        driver.quit(); // it closes every window
+        driver.quit(); // it closes every window
 //        driver.close(); It closes only the current window
     }
     @Test
