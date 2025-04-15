@@ -2,7 +2,7 @@ package demo;
 
 import org.testng.annotations.Test;
 
-public class TestClass07 {
+public class TestClass07 extends BaseClass{
     @Test
     public void method01(){
         System.out.println("TestClass07 : Inside method01");
