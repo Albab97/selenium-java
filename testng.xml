@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!-- Hierarchy: Test Suite -> Test Cases -> Test Classes -> Test Methods  -->
+<!--If we want to run all the test classes then it would hard to go and run each individually, instead we can run all the classes together by clubbing then in test cases or test suites-->
+<!--We can run our test cases, test classes or test methods in parallel (not in a particular order).-->
+    <suite name="TestSuite01" parallel ="tests" >
+    <test name="TestCase01">
+        <classes>
+            <class name="demo.TestClass05"/>
+        </classes>
+    </test>
+    <test name="TestCase02">
+        <classes>
+            <class name="demo.TestClass06">
+<!--By default, all the methods in the class are included if only class is mentioned but if we specify include tag then only those methods which are included are run.-->
+<!--If we mention a method in the exclude tag then only that method will be excluded -->
+                <methods>
+                    <include name="method01"></include>
+                </methods>
+            </class>
+            <class name="demo.TestClass07">
+                <methods>
+                    <exclude name="method01"></exclude>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
