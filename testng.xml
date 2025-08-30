@@ -3,7 +3,7 @@
 <!-- Hierarchy: Test Suite -> Test Cases -> Test Classes -> Test Methods  -->
 <!--If we want to run all the test classes then it would hard to go and run each individually, instead we can run all the classes together by clubbing then in test cases or test suites-->
 <!--We can run our test cases, test classes or test methods in parallel (not in order).-->
-    <suite name="TestSuite01" parallel ="tests" >
+<suite name="TestSuite01" parallel ="tests" >
     <test name="TestCase01">
         <classes>
             <class name="demo.TestClass05"/>
