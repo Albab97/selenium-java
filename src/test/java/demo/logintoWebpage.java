@@ -39,5 +39,6 @@ public class logintoWebpage {
         String actualResult = driver.findElement(By.tagName("h6")).getText();
         String expectedResult = "Dashboard";
         Assert.assertEquals(actualResult,expectedResult);
+        Thread.sleep(2000);
     }
 }
