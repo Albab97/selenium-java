@@ -20,7 +20,7 @@ public class TestAutomation04  {
         driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
     }
     @Test
-    public void userLoginLogoutCSSSelector(){
+    public void usingNavigate(){
         driver.get("https://lkmdemoaut.accenture.com/TestMeApp");
         System.out.println("Page Title: " + driver.getTitle());
         System.out.println("Page URL: " + driver.getCurrentUrl());
