@@ -13,8 +13,8 @@
     <test name="TestCase02">
         <classes>
             <class name="demo.TestClass06">
-<!--By default, all the methods in the class are included if only class is mentioned but if we specify include tag then only those methods which are included are run.-->
-<!--If we mention a method in the exclude tag then only that method will be excluded -->
+                <!--By default, all the methods in the class are included if only class is mentioned but if we specify include tag then only those methods which are included are run.-->
+                <!--If we mention a method in the exclude tag then only that method will be excluded -->
                 <methods>
                     <include name="method01"></include>
                 </methods>
