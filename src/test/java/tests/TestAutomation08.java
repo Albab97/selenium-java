@@ -1,5 +1,6 @@
 package tests;
 
+import com.beust.ah.A;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -25,7 +26,7 @@ public class TestAutomation08 {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
     }
-    @Test
+    @Test(priority = 0)
     public void keyBoardEventsTest() throws InterruptedException {
         driver.get("https://lkmdemoaut.accenture.com/TestMeApp/fetchcat.htm");
         WebElement searchBox = driver.findElement(By.id("myInput"));
@@ -40,6 +41,20 @@ public class TestAutomation08 {
 
         driver.findElement(By.xpath("//div[contains(text(),'Winter wear')]")).click();
 //        Thread.sleep(2000);
+    }
+    @Test
+    public void mouseAndKeyboardEvents(){
+        driver.get("https://lkmdemoaut.accenture.com/TestMeApp/fetchcat.htm");
+
+        Actions actions = new Actions(driver);
+        actions.keyDown(Keys.SHIFT)
+                .click(driver.findElement(By.linkText("SignIn")))
+                .keyUp(Keys.SHIFT).build().perform();
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
     @AfterTest
     public void afterTest(){
